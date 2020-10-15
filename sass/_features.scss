@@ -1,0 +1,221 @@
+.tracker {
+    grid-row: 2 / 3;
+    grid-column: full-start / full-end;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(min-content, 1fr)); 
+    grid-template-rows: repeat(2, min-content);
+    justify-items: center;
+    grid-row-gap: 2.5rem;
+
+    @media only screen and (max-width:$bp-medium) {
+        display: grid;
+        grid-template-columns: minmax(min-content, 1fr); 
+        grid-template-rows: auto;
+        justify-items: center;
+        grid-row-gap: 2.5rem;
+        padding: 2rem;
+    }
+
+    &__overview {
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+        padding: 2rem; 
+
+        @media only screen and (max-width:$bp-medium) {
+            grid-column: 1 / -1;
+            grid-row: 1 / 2;
+        }
+        
+    }
+
+
+    &__image {
+        grid-row: 2 / 3;
+        grid-column: 1 / 2 ;
+
+        @media only screen and (max-width:$bp-medium) {
+            grid-row: 2 / 3;
+            grid-column: 1 / -1 ;
+        }
+    }
+
+    &__computer {
+        transform: translateX(-3rem);
+        max-width: 100%;
+       // max-height: 100%;
+       @media only screen and (max-width:$bp-medium) {
+        transform: translateX(0);
+       }
+    }
+
+    &__features {
+        grid-column: 2 / -1;
+        grid-row: 2 / 3;
+
+        padding: 2rem;
+        justify-self: start;
+        margin-top: 1.8rem;
+
+        @media only screen and (max-width:$bp-medium) {
+            grid-column: 1 / -1;
+            grid-row: 3 / 4;
+    
+            padding: 0;
+            justify-self: center;
+            margin-top: 0;
+        }        
+    }
+
+    &__feature {
+        max-width: 19rem;
+        justify-self: flex-start;
+
+        @media only screen and (max-width:$bp-medium) {
+            max-width: 18.5rem;
+            justify-self: center;
+           }
+    }
+
+    &__feature:not(:last-child) {
+        margin-bottom: 2.3rem;
+    }
+
+    &__heading {
+        margin-bottom: .4rem;
+        color: $dark-grayish-blue;
+
+        @media only screen and (max-width:$bp-medium) {
+            text-align: center;
+           }
+    }
+
+    &__p {
+        color: $grayish-blue;
+        font-size: .9rem;
+        line-height: 1.6;
+
+        @media only screen and (max-width:$bp-medium) {
+            text-align: center;
+           }
+    }
+   
+}
+
+.access {
+    grid-row: 3 / 4;
+    grid-column: full-start / full-end;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    grid-row-gap: 5rem;
+    margin-top: 7rem;
+    padding: 1rem;
+
+    &__overview {
+        grid-column: 1 / -1;
+        
+    }
+
+    &__image {
+        grid-column: 1 / -1;
+    }
+
+    &__devices {
+        max-width: 100%;
+    }
+}
+
+.tools {
+    grid-row: 4 / 5;
+    grid-column: full-start / full-end;
+    margin: 4rem 0;
+    padding: 1rem;
+
+    &__workflow {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min-content, 19.5rem));
+        grid-template-rows: auto;
+        margin: 4rem 0;
+        justify-content: center;
+        align-items: baseline;
+    }
+
+}
+
+.toolz {
+   // margin-top: .5rem;
+}
+
+
+//ABOUT SECTION
+.about {
+    grid-row: 6 / 7;
+    grid-column: center-start / center-end;
+    margin: 6rem 0;
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+//Tracker typography
+.h2-heading {
+    color: $dark-grayish-blue;
+    margin-bottom: 13px;
+    text-align: center;
+}
+
+//Tracker text
+.text {
+    text-align: center;
+    color: $grayish-blue;
+    max-width: 35rem;
+    font-size: .95rem;
+
+    &--1 {
+        margin: 0 auto;
+    }
+}
+
+//About section text 
+.text-0 {
+    text-align: center;
+    color: $grayish-blue;
+    margin-bottom: 3rem;
+    max-width: 37.5rem;
+}
+
+//Workflow
+.tool {
+    padding: .2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2.3rem;
+
+    &__icon {
+        display: block;
+        max-width: 100%;
+        margin-bottom: 2rem;
+        
+    }
+
+    &__text {
+        color: $grayish-blue;
+        max-width: 19rem;
+        text-align: center;
+        font-size: .9rem;
+        line-height: 2;
+
+    }
+}
+//Workflow heading
+.heading-3 {
+    color: $dark-grayish-blue;
+    margin-bottom: 1rem;
+}
+
+//MIXIN
