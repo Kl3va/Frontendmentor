@@ -1,0 +1,58 @@
+//PRIMARY COLOURS
+$color-dark-blue: hsl(217, 28%, 15%); //Sign-up colour
+$color-darker-blue: hsl(218, 28%, 13%); //main background
+$color-darkest-blue: hsl(216, 53%, 9%); //footer background
+$color-dark-blue-2: hsl(219, 30%, 18%); //testimonials background
+
+//SECONDARY COLORS
+$color-lighter-blue: hsl(176, 68%, 64%); //inside call-to-action gradient
+$color-light-blue: hsl(198, 60%, 50%); //inside call-to-action gradient
+
+//FONTS
+$font-primary: 'Open Sans', sans-serif;
+$font-secondary: 'Raleway', sans-serif;
+
+@mixin text-style {
+    text-align: center;
+    font-family: sans-serif;
+    //font-size: 1.5rem;
+    color: rgba(#fff,.99);
+} 
+
+//BREAKPOINTS
+$bp-medium:43.75em; //700px
+$bp-large:56.25em; //900px
+$bp-larger:62.5em; //1000px
+$bp-small:37.5em; //600px
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 87.5%; //14px = 1rem
+
+   /* @media only screen and (max-width:$bp-medium) {
+        font-size: 112%; //18px=1rem
+    } */
+}
+
+body {
+    font-family: $font-secondary;
+    font-weight: 400;
+    background-color: $color-darker-blue;
+    color: #fff;
+    line-height: 1.3;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: repeat(7, min-content);
+    grid-template-columns: [full-start]1fr [center-start]repeat(12,[col-start] minmax(min-content,7rem)[col-end])[center-end] 1fr[full-end];
+
+}
