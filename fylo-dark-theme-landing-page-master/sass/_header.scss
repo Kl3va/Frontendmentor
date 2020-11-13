@@ -4,25 +4,46 @@
 
     display: flex;
     flex-direction: row;
-    padding: 2rem;
+    padding: 3rem 2rem 2.5rem 2rem;
     margin-bottom: 5rem;
     color: #fff;
     background-color: $color-dark-blue;
+
+    @media only screen and (max-width:$bp-smallest) {
+        display: flex;
+        flex-direction: column;
+    } 
+
 }
 
 .header-logo {
     margin-right: auto;
     align-self: center;
+
+    @media only screen and (max-width:$bp-smaller) {
+        margin-bottom: 1rem;
+    } 
+
 }
 
 .header-list ul {
     display: flex;
     flex-direction: row;
     align-items: center;
+
+     @media only screen and (max-width:$bp-smaller) {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    } 
 }
 
 .header-list li {
     list-style: none;
+
+    @media only screen and (max-width:$bp-smaller) {
+        margin-bottom: .3rem;
+    } 
 
     @media only screen and (max-width:$bp-small) {
         font-size: .8rem;
@@ -32,3 +53,12 @@
         margin-right: 2vw;
     }
 } 
+
+.header-list ul li a {
+    text-decoration: none;
+    color: white;
+
+    &:hover {
+        color: aqua;
+    }
+}
