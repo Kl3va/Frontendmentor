@@ -138,6 +138,12 @@ body {
       .footer-list ul li:nth-child(4) {
         margin-bottom: 3.5rem; } }
 
+.footer-list ul li a {
+  text-decoration: none;
+  color: white; }
+  .footer-list ul li a:hover {
+    color: aqua; }
+
 .footer-social {
   display: flex;
   align-self: start;
@@ -417,3 +423,5 @@ input[type=submit] {
   @media only screen and (max-width: 25em) {
     input[type=submit] {
       padding: .5rem 1rem; } }
+  input[type=submit]:hover {
+    background-image: linear-gradient(to right, rgba(0, 128, 0, 0.5), rgba(0, 0, 255, 0.5)); }

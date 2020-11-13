@@ -349,4 +349,8 @@ input[type=submit] {
     @media only screen and (max-width:$bp-smaller) {
         padding: .5rem 1rem;
     }
+
+    &:hover {
+        background-image: linear-gradient( to right, rgba(green,.5),rgba(blue,.5));
+    }
 }
