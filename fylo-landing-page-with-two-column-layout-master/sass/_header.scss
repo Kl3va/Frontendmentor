@@ -1,0 +1,61 @@
+.header {
+    grid-row: 1 / 2;
+    grid-column: full-start / full-end;
+    padding: 2.5rem 4rem 0 4rem;
+
+
+    display: flex;
+
+    @media only screen and (max-width:$bp-largest) {
+        padding: 1.5rem 2rem 0 2rem;
+    }
+}
+
+.header-logo {
+    margin-right: auto;
+
+    @media only screen and (max-width:$bp-medium) {
+        width: 6.5rem;
+    }
+
+    &__img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+.header-list ul {
+    display: flex;
+    margin-top: .5rem;
+
+    @media only screen and (max-width:$bp-small) {
+        flex-direction: column;
+        margin-top: 0;
+    }
+
+}
+
+.header-list ul li {
+    list-style: none;
+
+    @media only screen and (max-width:$bp-small) {
+        &:not(:last-child) {
+            margin-bottom: .5rem;
+        }
+    }
+    
+}
+
+.header-list ul li a {
+    text-decoration: none;
+    transition: all .3s ease-in-out;
+    padding: .5rem 1rem;
+
+    &:hover {
+        color: #fff;
+        background-color: indianred;    
+        border-radius: .2rem;
+    }
+}
+
